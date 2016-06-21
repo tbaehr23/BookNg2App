@@ -10,12 +10,16 @@
                     <tr>
                         <th>Title</th>
                         <th>Year</th>
+                        <th>Price</th>
+                        <th>Genre</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr *ngFor="#book of books">
                         <td>{{book.title}}</td>
                         <td>{{book.year}}</td>
+                        <td>{{book.price}}</td>
+                        <td>{{book.genre}}</td>
                     </tr>
                 </tbody>
             </table>

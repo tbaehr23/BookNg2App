@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core'
 import {BookService} from './book.service';
+import {IBook} from './book.entity'
 
 @Component({
     selector:"book-list",
@@ -8,7 +9,7 @@ import {BookService} from './book.service';
 })
 export class BookListComponent implements OnInit{
     pageTitle: string = "Book List";
-    books: any[];
+    books: IBook[];
     
 
     constructor(private _bookService: BookService){}
