@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {BookListComponent} from './books/book-list.component';
+import {BookService} from './books/book.service';
 
 @Component({
   selector: 'bm-app',
@@ -13,7 +14,8 @@ import {BookListComponent} from './books/book-list.component';
   </div>
   </div>
   `,
-  directives: [BookListComponent]
+  directives: [BookListComponent],
+  providers: [BookService]
 })
 export class AppComponent {
   pageTitle: string = "Book Manager";
