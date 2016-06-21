@@ -1,3 +1,21 @@
+typings
+**/app/**/*.js
+**/app/**/*.map
+node_modules
+jspm_packages
+bower_components
+
+.vs
+**/*.sou
+**/*.user
+bin
+obj
+packages
+*.log
+
+
+
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
