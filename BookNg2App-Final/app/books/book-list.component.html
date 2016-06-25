@@ -5,7 +5,7 @@
  
     <div class='panel-body'>
         <div class='table-responsive'>
-            <table class='table'>
+            <table class='table' *ngIf='books && books.length'>
                 <thead>
                     <tr>
                         <th>Title</th>
@@ -23,6 +23,7 @@
                     </tr>
                 </tbody>
             </table>
+            {{errorMessage}}         
         </div>
     </div>
 

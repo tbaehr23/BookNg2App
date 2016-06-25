@@ -11,6 +11,11 @@ export class BookService{
     
     getBooks(): Observable<IBook[]>{
         return this._http.get("api/books.json")
-                    .map( (data: Response) => <IBook[]>data.json() );
+                    .map( (data: Response) => <IBook[]>data.json() )
+                    .catch(this.handleError);
+    }
+
+    private handleError(err: Response){
+        return Observable.throw(err.json().errpr || 'Web service eeror');
     }
 }
