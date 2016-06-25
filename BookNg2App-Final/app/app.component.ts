@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import {BookListComponent} from './books/book-list.component';
 import {BookService} from './books/book.service';
+import {HTTP_PROVIDERS} from '@angular/http';
+import 'rxjs/Rx'; // loads all library features as javascript
 
 @Component({
   selector: 'bm-app',
@@ -15,7 +17,7 @@ import {BookService} from './books/book.service';
   </div>
   `,
   directives: [BookListComponent],
-  providers: [BookService]
+  providers: [BookService, HTTP_PROVIDERS]
 })
 export class AppComponent {
   pageTitle: string = "Book Manager";
